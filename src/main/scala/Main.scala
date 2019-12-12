@@ -40,6 +40,8 @@ object Main {
     sims.map{ case (essayId, sim) =>
       essayId + "\t" + sim.toArray.mkString(",")
     }.saveAsTextFile(output)
+
+    spark.stop()
   }
 
 }

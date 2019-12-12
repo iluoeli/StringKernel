@@ -11,7 +11,10 @@ for i in range(1, 9):
     dev_set = dev[dev['essay_set'] == i]['essay']
     test_set = test[test['essay_set'] == i]['essay']
 
-    concated = pd.concat([train_set, dev_set, test_set])
+    # concated = pd.concat([train_set, dev_set, test_set])
+    #
+    # concated.to_csv("/home/luoyl/IdeaProjects/StringKernel/data/concat/set-%d.tsv" % i,
+    #                 header=False, index=True, sep='\t')
 
-    concated.to_csv("/home/luoyl/IdeaProjects/StringKernel/data/concat/set-%d.tsv" % i,
+    train_set.to_csv("/home/luoyl/IdeaProjects/StringKernel/data/train/set-%d.tsv" % i,
                     header=False, index=True, sep='\t')
